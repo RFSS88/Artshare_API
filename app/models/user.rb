@@ -1,3 +1,7 @@
 class User < ApplicationRecord
-    validates :name, :email, presence: true   
+    validates :username, presence: true
+    validates :username, uniqueness: true
+    #validates column username and that they must be present in order to save
+    #an instance of User.
+
 end
